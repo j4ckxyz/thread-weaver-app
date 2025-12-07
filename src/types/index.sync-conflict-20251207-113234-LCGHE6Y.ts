@@ -23,14 +23,11 @@ export interface ThreadNode {
         score?: number;
     };
     position: { x: number; y: number };
-    style?: any;
 }
-
-import type { Edge } from 'reactflow';
 
 export interface FlowData {
     nodes: ThreadNode[];
-    edges: Edge[];
+    edges: { id: string; source: string; target: string; animated?: boolean }[];
 }
 
 export interface AppState {
@@ -41,15 +38,4 @@ export interface AppState {
     status: 'idle' | 'fetching' | 'summarizing' | 'complete' | 'error';
     error: string | null;
     flowData: FlowData | null;
-}
-
-export interface HistoryItem {
-    id: string;
-    url: string;
-    source: SourceType;
-    topicCount: number;
-    commentCount: number;
-    timestamp: number;
-    flowData: FlowData;
-    modelId: string;
 }

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
 import { openRouterService } from '../services/openRouter';
-import { Send, MessageSquare, Loader2, X, Maximize2, Minimize2, Sparkles } from 'lucide-react';
+import { Send, MessageSquare, Loader2, X, Sparkles } from 'lucide-react';
 import type { ThreadNode } from '../types';
 
 export const ChatPanel: React.FC = () => {
@@ -9,8 +9,7 @@ export const ChatPanel: React.FC = () => {
         flowData,
         setFlowData,
         apiKey,
-        selectedModel,
-        inputUrl
+        selectedModel
     } = useApp();
 
     const [isOpen, setIsOpen] = useState(false);

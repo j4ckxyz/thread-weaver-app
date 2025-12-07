@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { AppProvider } from './context/AppContext';
 import { Layout } from './components/Layout';
 import { ConfigPanel } from './components/ConfigPanel';
@@ -7,7 +7,6 @@ import { FlowBoard } from './components/FlowBoard';
 import { FeedBoard } from './components/FeedBoard';
 import { ChatPanel } from './components/ChatPanel';
 import { LayoutGrid, List } from 'lucide-react';
-import { useState } from 'react';
 
 function App() {
   const [viewMode, setViewMode] = useState<'map' | 'feed'>('map');

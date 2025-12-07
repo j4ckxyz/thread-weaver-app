@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 import { useApp } from '../context/AppContext';
 import { MessageSquare, Quote, Hash, ChevronDown, ChevronUp } from 'lucide-react';
-import type { ThreadNode } from '../types';
 
 export const FeedBoard: React.FC = () => {
     const { flowData } = useApp();
